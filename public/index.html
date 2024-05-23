@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="h-screen" background="img/bg.jpg">
+    <div class="container max-w-full h-fit bg-zinc-950 text-white p-8 w-2/5 my-24 mx-auto border-none rounded-xl"> 
+        <div class="weather-header flex justify-between items-center">
+            <div>
+                <form action="" class="weather-search relative p-1" id="city-input">
+                    <input type="text" placeholder="Search for a city..." class="weather-search-form border-none bg-zinc-900 outline-none text-white py-2 px-10 rounded-md">
+                    <img src="img/search.svg" alt="" class="absolute left-2.5 top-2.5 h-5">
+                </form>
+            </div>
+            <div class="weather-units w-20 flex justify-evenly">
+                <div class="cursor-pointer hover:bg-zinc-800 hover:border hover:border-white hover:rounded-md weather-unit-celsius" id="celsius">
+                    <h2 class="text-2xl p-1 ">&#176C</h2>
+                </div>
+                <div class="cursor-pointer hover:bg-zinc-800 hover:border hover:border-white hover:rounded-md weather-unit-farhenite ">
+                    <h2 class="text-2xl p-1 ">&#176F</h2>
+                </div>
+            </div>
+        </div>
+        <div class="weather-body grid grid-cols-1 justify-items-center mt-12">
+            <div>
+                <h1 class="weather-city text-4xl">City, Country</h1>
+            </div>
+            <div class="weather-datetime mb-8 text-s mt-2">
+                <h2 id="output-date-time">Wednesday, November 20, 2030 at 12:00 AM</h2>
+            </div>
+            <div class="weather-forecast bg-zinc-900 py-2 px-4 rounded-3xl w-fit text-center">
+                <p id="output-desc" class="text-xl">Clear</p>
+            </div>
+            <div class="weather-icon w-32">
+                <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="">
+            </div>
+            <div>
+                <p id="weather-temp" class="text-4xl">
+                    18&#176
+                </p>
+            </div>
+            <div class="weatherr-minmax flex justify-center">
+                <p class="m-2" id="min-temp">Min: 18&#176</p>
+                <p class="m-2" id="max-temp">Max: 18&#176</p>
+            </div>
+        </div>
+        <div class="weather-info grid grid-cols-2 gap-2 mt-12">
+            <div class="weather-card flex items-center bg-zinc-900 p-2 rounded-lg h-24">
+                <img src="img/thermometer.svg" alt="" class="size-6 mr-2">
+                <div class="grid grid-cols-1">
+                    <p class="">Real Feel</p>
+                    <p class="weather-real-feel">18&#176</p>
+                </div>
+            </div>
+            <div class="weather-card flex items-center bg-zinc-900 p-2 rounded-lg h-24">
+                <img src="img/droplet.svg" alt="" class="size-6 mr-2">
+                <div class="grid grid-cols-1">
+                    <p class="">Humidity</p>
+                    <p class="weather-humidity">100 %</p>
+                </div>
+            </div>
+            <div class="weather-card flex items-center bg-zinc-900 p-2 rounded-lg h-24">
+                <img src="img/wind.svg" alt="" class="size-6 mr-2">
+                <div class="grid grid-cols-1">
+                    <p class="">Wind</p>
+                    <p class="weather-wind">100 m/s</p>
+                </div>
+            </div>
+            <div class="weather-card flex items-center bg-zinc-900 p-2 rounded-lg h-24">
+                <img src="img/icons8-gauge-32.png" alt="" class="w-6 size-6 mr-2">
+                <div class="grid grid-cols-1">
+                    <p class="">Pressure</p>
+                    <p class="weather-pressure">100 hPa</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
