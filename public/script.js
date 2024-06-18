@@ -14,7 +14,7 @@ const wind = document.querySelector('.weather-wind')
 const pressure = document.querySelector('.weather-pressure')
 // console.log(unitCel);
 
-const apiKey = `f95fa087df118bfc8458e7f52c4755e2`
+const apiKey = `add_your_key_here`
 const coordAPIURL = `http://api.openweathermap.org/geo/1.0/direct`
 const revCoordAPIURL = `http://api.openweathermap.org/geo/1.0/reverse`
 const weatherAPIURL = `https://api.openweathermap.org/data/2.5/weather`
